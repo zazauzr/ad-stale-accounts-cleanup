@@ -91,3 +91,8 @@ User: John Doe (j.doe) | Current DN: CN=John Doe,OU=Chelyabinsk,OU=UBA,DC=exampl
 [SUCCESS] Moved j.doe to OU=Pending Deletion,OU=UBA,DC=example,DC=com
 --- AD Cleanup Finished at 09/06/2026 12:00:02 ---
 ```
+## Copyright and License
+
+Copyright (c) 2026 zazauzr. All rights reserved.
+
+This repository and all its contents (including documentation, scripts, and configuration files) are proprietary. Unauthorized copying, modification, distribution, or commercial use of any materials from this repository, via any medium, is strictly prohibited without the express prior written permission of the copyright holder.
