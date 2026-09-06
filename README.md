@@ -4,7 +4,7 @@ A production-ready PowerShell automation tool designed to identify disabled Acti
 
 ---
 
-## 💡 Business Value & Problem Statement
+##  Business Value & Problem Statement
 
 ### The Problem
 In enterprise Windows environments, when employees leave the company, their user accounts are typically disabled by the Helpdesk. However, system administrators often forget to move these accounts out of production Organizational Units (OUs). 
@@ -19,7 +19,7 @@ This tool automates the **"Discover & Isolate"** phase of the IT lifecycle. It c
 
 ---
 
-## 🛠️ Tech Stack & Prerequisites
+##  Tech Stack & Prerequisites
 
 * **Language:** PowerShell 5.1+ / Core 7.x
 * **Modules:** `ActiveDirectory` (Included in RSAT - Remote Server Administration Tools)
@@ -28,7 +28,7 @@ This tool automates the **"Discover & Isolate"** phase of the IT lifecycle. It c
 
 ---
 
-## 📐 Script Architecture
+##  Script Architecture
 
 ```text
 [Active Directory Domain]
@@ -46,7 +46,7 @@ This tool automates the **"Discover & Isolate"** phase of the IT lifecycle. It c
 
 ---
 
-## 🚀 Deployment & Usage Guide
+##  Deployment & Usage Guide
 
 ### 1. Verification & Dry Run (Safe Mode)
 Always test script behavior using the built-in `-WhatIf` safety flag. This ensures no actual changes are written to your Domain Controller database.
@@ -68,7 +68,7 @@ To perform the live migration of misplaced disabled users, run the script withou
 
 ---
 
-## 📊 Healthcheck & Verification
+## Healthcheck & Verification
 
 Upon successful execution, the script generates structural console output and logs actions into a persistent text file.
 
