@@ -15,7 +15,8 @@
     .\Invoke-ADStaleAccountsCleanup.ps1 -TargetOU "OU=StaleUsers,DC=example,DC=com" -WhatIf
 #>
 
-[CmdletBinding()]
+[CmdletBinding(SupportsShouldProcess = $true)]
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '')]
 param (
     [Parameter(Mandatory = $true)]
     [string]$TargetOU,
@@ -29,7 +30,7 @@ begin {
     
     # Ensure Active Directory Module is available
     if (-not (Get-Module -ListAvailable -Name ActiveDirectory)) {
-        Throw "ActiveDirectory PowerShell module is required but not installed."
+        throw "ActiveDirectory PowerShell module is required but not installed."
     }
     Import-Module ActiveDirectory
 
