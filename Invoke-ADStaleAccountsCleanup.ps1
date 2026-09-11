@@ -17,6 +17,7 @@
 
 [CmdletBinding(SupportsShouldProcess = $true)]
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '')]
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseBOMForUnicodeEncodedFile', '')]
 param (
     [Parameter(Mandatory = $true)]
     [string]$TargetOU,
@@ -72,7 +73,7 @@ process {
 
         foreach ($User in $MisplacedAccounts) {
             $LogMessage = "User: $($User.Name) ($($User.SamAccountName)) | Current DN: $($User.DistinguishedName)"
-            Write-Host "[→] $LogMessage" -ForegroundColor LightGray
+            Write-Host "[->] $LogMessage" -ForegroundColor LightGray
             $LogMessage | Out-File -FilePath $LogPath -Append
 
             # Execute Move
